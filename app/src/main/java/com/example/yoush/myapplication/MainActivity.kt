@@ -62,11 +62,7 @@ class MainActivity : AppCompatActivity() {
             input.text = "$s$inputStr"
         } else if (isAdd() || isSub() || isMul() || isDiv()) {
             updateOperator(inputStr)
-            if (output.text == ""){
-                updateOutputView(input.text as String, operator.text.substring(1, operator.text.length))
-            } else {
-                updateOutputView(output.text as String, operator.text.substring(1,operator.text.length))
-            }
+            updateOutputView(input.text as String, operator.text.substring(1, operator.text.length))
         }
     }
 
